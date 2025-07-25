@@ -1,5 +1,5 @@
-import { ModeToggle } from "@/components/utils/ModeToggle"
+import LandingPage from "@/web/components/customs/LandingPage/LandingPage"
 
 export default function Home() {
-  return <ModeToggle />
+  return <LandingPage />
 }
