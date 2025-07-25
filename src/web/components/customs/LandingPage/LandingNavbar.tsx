@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl"
 import Link from "next/link"
 
 import { CircleIcon } from "@/web/components/customs/utils/CircleIcon"
@@ -6,6 +7,8 @@ import { Button } from "@/web/components/ui/button"
 import { routes } from "@/web/routes"
 
 export default function LandingNavbar() {
+  const t = useTranslations("LandingPage")
+
   return (
     <header className="border-b bg-background/80 sticky top-0 z-50">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -18,11 +21,11 @@ export default function LandingNavbar() {
         <div className="flex items-center gap-4">
           <ModeToggle />
           <Link href={routes.auth.login}>
-            <Button variant="ghost">Sign In</Button>
+            <Button variant="ghost">{t("signIn")}</Button>
           </Link>
 
           <Link href={routes.auth.register}>
-            <Button>Try It Now</Button>
+            <Button>{t("signUp")}</Button>
           </Link>
         </div>
       </div>
