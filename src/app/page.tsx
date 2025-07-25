@@ -1,9 +1,5 @@
-import { Button } from "@/components/ui/button"
+import { ModeToggle } from "@/components/utils/ModeToggle"
 
 export default function Home() {
-  return (
-    <Button variant="default" size="default">
-      Click me
-    </Button>
-  )
+  return <ModeToggle />
 }
