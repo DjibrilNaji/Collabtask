@@ -1,3 +1,7 @@
+import { useTranslations } from "next-intl"
+
 export default function LandingBody() {
-  return <main className="container mx-auto text-center">Welcome to TaskBuddy</main>
+  const t = useTranslations("LandingPage")
+
+  return <main className="container mx-auto text-center">{t("title")}</main>
 }
