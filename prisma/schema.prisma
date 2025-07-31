@@ -48,7 +48,6 @@ model Workspace {
 }
 
 model WorkspaceMember {
-  id           Int       @default(autoincrement())
   workspace_id Int
   user_id      Int
   workspace    Workspace @relation(fields: [workspace_id], references: [id])
