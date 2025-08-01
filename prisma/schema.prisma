@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -14,46 +8,56 @@ datasource db {
 }
 
 model User {
-  id                    Int                     @id @default(autoincrement())
+  id                    String                  @id @default(uuid())
   email                 String                  @unique
   name                  String
   avatar_url            String?
-  password_hash         String
-  is_verified           Boolean                 @default(false)
-  created_at            DateTime                @default(now())
+  emailVerified         Boolean
+  image                 String?
+  createdAt             DateTime
+  updatedAt             DateTime
   EmailVerificationCode EmailVerificationCode[]
   Workspace             Workspace[]
   WorkspaceMember       WorkspaceMember[]
   TaskComment           TaskComment[]
+  sessions              Session[]
+  accounts              Account[]
+
+  @@map("user")
 }
 
 model EmailVerificationCode {
   id         Int      @id @default(autoincrement())
-  user_id    Int
+  user_id    String
   user       User     @relation(fields: [user_id], references: [id])
   code       String   @unique
   expires    DateTime
   created_at DateTime @default(now())
+
+  @@map("email_verification_code")
 }
 
 model Workspace {
   id              Int               @id @default(autoincrement())
   name            String
   description     String?
-  owner_id        Int
+  owner_id        String
   owner           User              @relation(fields: [owner_id], references: [id])
   created_at      DateTime          @default(now())
   WorkspaceMember WorkspaceMember[]
   Task            Task[]
+
+  @@map("workspace")
 }
 
 model WorkspaceMember {
   workspace_id Int
-  user_id      Int
+  user_id      String
   workspace    Workspace @relation(fields: [workspace_id], references: [id])
   user         User      @relation(fields: [user_id], references: [id])
 
   @@id([workspace_id, user_id])
+  @@map("workspace_member")
 }
 
 model Task {
@@ -68,14 +72,63 @@ model Task {
   workspace_id Int
   workspace    Workspace     @relation(fields: [workspace_id], references: [id])
   TaskComment  TaskComment[]
+
+  @@map("task")
 }
 
 model TaskComment {
   id         Int      @id @default(autoincrement())
   task_id    Int
-  user_id    Int
+  user_id    String
   content    String
   created_at DateTime @default(now())
   task       Task     @relation(fields: [task_id], references: [id])
   user       User     @relation(fields: [user_id], references: [id])
+
+  @@map("task_comment")
+}
+
+model Session {
+  id        String   @id
+  expiresAt DateTime
+  token     String
+  createdAt DateTime
+  updatedAt DateTime
+  ipAddress String?
+  userAgent String?
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([token])
+  @@map("session")
+}
+
+model Account {
+  id                    String    @id
+  accountId             String
+  providerId            String
+  userId                String
+  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  accessToken           String?
+  refreshToken          String?
+  idToken               String?
+  accessTokenExpiresAt  DateTime?
+  refreshTokenExpiresAt DateTime?
+  scope                 String?
+  password              String?
+  createdAt             DateTime
+  updatedAt             DateTime
+
+  @@map("account")
+}
+
+model Verification {
+  id         String    @id
+  identifier String
+  value      String
+  expiresAt  DateTime
+  createdAt  DateTime?
+  updatedAt  DateTime?
+
+  @@map("verification")
 }
