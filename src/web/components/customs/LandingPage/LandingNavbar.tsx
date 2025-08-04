@@ -20,11 +20,11 @@ export default function LandingNavbar() {
 
         <div className="flex items-center gap-4">
           <ModeToggle />
-          <Link href={routes.auth.login}>
+          <Link href={routes.auth.login.path}>
             <Button variant="ghost">{t("signIn")}</Button>
           </Link>
 
-          <Link href={routes.auth.register}>
+          <Link href={routes.auth.register.path}>
             <Button>{t("signUp")}</Button>
           </Link>
         </div>
