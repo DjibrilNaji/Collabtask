@@ -2,7 +2,9 @@ import type { Metadata } from "next"
 import { NextIntlClientProvider } from "next-intl"
 import { getLocale } from "next-intl/server"
 import { Geist, Geist_Mono } from "next/font/google"
+import { Toaster } from "sonner"
 
+import TanstackProvider from "@/providers/TanstackProvider"
 import { ThemeProvider } from "@/providers/ThemeProvider"
 import "./globals.css"
 
@@ -31,14 +33,19 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
-        </ThemeProvider>
+        <TanstackProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <NextIntlClientProvider>
+              {children}
+              <Toaster position="bottom-right" richColors />
+            </NextIntlClientProvider>
+          </ThemeProvider>
+        </TanstackProvider>
       </body>
     </html>
   )

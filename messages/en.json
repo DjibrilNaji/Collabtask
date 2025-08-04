@@ -1,7 +1,45 @@
 {
+  "Global": {
+    "goBackToLogin": "Back to Login",
+    "or": "or"
+  },
   "LandingPage": {
+    "title": "Welcome to CollabTask",
     "signIn": "Sign In",
-    "signUp": "Try it now",
-    "title": "Welcome to TaskBuddy"
+    "signUp": "Try it now"
+  },
+  "Form": {
+    "title": "Create your account",
+    "description": "Start managing your projects with CollabTask",
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "password": "Password",
+    "submit": "Create Account",
+    "forgotPassword": "Forgot your password?",
+    "login": "Log In",
+    "alreadyHaveAccount": "Already have an account?",
+    "register": "Register",
+    "registration": "Registering...",
+    "signOAuth": "Sign {action} with {provider}",
+    "Error": {
+      "fullNameError": "Please enter your full name.",
+      "emailError": "Please enter a valid email address.",
+      "passwordError": "Password must contain at least 10 characters, including 1 uppercase letter, 1 lowercase letter, 1 digit, and 1 special character.",
+      "passwordLengthError": "Password must be at least 10 characters long.",
+      "passwordComplexityError": "Password must include at least one uppercase letter, one lowercase letter, one digit, and one special character."
+    },
+    "Success": {
+      "registrationSuccess": "Registration successful!",
+      "emailVerification": "Check your email for verification."
+    }
+  },
+  "GlobalErrors": {
+    "ERROR_TITLE": "Error",
+    "USER_ALREADY_EXISTS": "A user with this email already exists.",
+    "UNKNOWN_ERROR": "An unknown error occurred. Please try again later.",
+    "INTERNAL_SERVER_ERROR": "An internal server error occurred. Please try again later."
+  },
+  "GlobalSuccess": {
+    "REGISTRATION_SUCCESS": "Registration successful!"
   }
 }
