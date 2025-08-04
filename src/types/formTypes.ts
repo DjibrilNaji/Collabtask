@@ -1,8 +1,6 @@
 import { emailValidator, passwordValidator, stringValidator } from "@/validators"
 import z from "zod"
 
-const MAX_HASHTAGS = 5
-
 export const signupFormSchema = z
   .object({
     name: stringValidator.min(2, {
