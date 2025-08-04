@@ -3,6 +3,11 @@
     "goBackToLogin": "Back to Login",
     "or": "or"
   },
+  "LocaleSwitcher": {
+    "label": "Choose Language",
+    "en": "English",
+    "fr": "French"
+  },
   "LandingPage": {
     "title": "Welcome to CollabTask",
     "signIn": "Sign In",

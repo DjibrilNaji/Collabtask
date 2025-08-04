@@ -1,7 +1,8 @@
 "use client"
 
 import { useTranslations } from "next-intl"
-import { CircleIcon } from "../../utils/CircleIcon"
+
+import { CircleIcon } from "@/web/components/customs/Utils/CircleIcon"
 
 export const AuthHeader = () => {
   const t = useTranslations("Form")

@@ -1,8 +1,8 @@
 import { useTranslations } from "next-intl"
 import Link from "next/link"
 
-import { CircleIcon } from "@/web/components/customs/utils/CircleIcon"
-import { ModeToggle } from "@/web/components/customs/utils/ModeToggle"
+import { CircleIcon } from "@/web/components/customs/Utils/CircleIcon"
+import { ModeToggle } from "@/web/components/customs/Utils/ModeToggle"
 import { Button } from "@/web/components/ui/button"
 import { routes } from "@/web/routes"
 
