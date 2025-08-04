@@ -1,12 +1,8 @@
 "use client"
 
-import { useTranslations } from "next-intl"
-
 import { CircleIcon } from "@/web/components/customs/Utils/CircleIcon"
 
 export const AuthHeader = () => {
-  const t = useTranslations("Form")
-
   return (
     <div className="flex gap-3 items-center mb-10">
       <CircleIcon />
