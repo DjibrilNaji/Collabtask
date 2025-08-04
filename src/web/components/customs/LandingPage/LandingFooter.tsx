@@ -1,4 +1,4 @@
-import { CircleIcon } from "@/web/components/customs/utils/CircleIcon"
+import { CircleIcon } from "@/web/components/customs/Utils/CircleIcon"
 
 export default function LandingFooter() {
   return (
