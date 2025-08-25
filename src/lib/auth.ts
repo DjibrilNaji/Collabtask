@@ -1,8 +1,8 @@
-import { sendEmailAction } from "@/actions/send-email"
 import { PrismaClient } from "@prisma/client"
 import { betterAuth } from "better-auth"
 import { prismaAdapter } from "better-auth/adapters/prisma"
 
+import { sendEmailAction } from "@/actions/send-email"
 import { routes } from "@/web/routes"
 
 const prisma = new PrismaClient()

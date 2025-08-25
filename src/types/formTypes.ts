@@ -1,5 +1,6 @@
-import { emailValidator, passwordValidator, stringValidator } from "@/validators"
 import z from "zod"
+
+import { emailValidator, passwordValidator, stringValidator } from "@/validators"
 
 export const signupFormSchema = z
   .object({

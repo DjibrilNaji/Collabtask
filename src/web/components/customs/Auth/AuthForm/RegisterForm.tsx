@@ -5,6 +5,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query"
 import { LoaderCircleIcon } from "lucide-react"
 import { useTranslations } from "next-intl"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { useForm } from "react-hook-form"
 import { toast } from "sonner"
 import z from "zod"
@@ -22,7 +23,6 @@ import {
 } from "@/web/components/ui/form"
 import { Input } from "@/web/components/ui/input"
 import { routes } from "@/web/routes"
-import { useRouter } from "next/navigation"
 
 export const RegisterForm = () => {
   const queryClient = useQueryClient()
@@ -91,18 +91,7 @@ export const RegisterForm = () => {
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>
-                <div className="flex justify-between items-center w-full">
-                  {t("Form.password")}
-
-                  <Link
-                    href={routes.auth.forgotPassword}
-                    className="text-sm italic text-gray-500 hover:underline"
-                  >
-                    {t("Form.forgotPassword")}
-                  </Link>
-                </div>
-              </FormLabel>
+              <FormLabel>{t("Form.password")}</FormLabel>
               <FormControl>
                 <Input type="password" placeholder="********" {...field} />
               </FormControl>

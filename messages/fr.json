@@ -14,7 +14,7 @@
     "signUp": "Essayer maintenant"
   },
   "Form": {
-    "title": "Créer votre compte",
+    "title": "Inscrivez-vous à CollabTask",
     "description": "Commencez à gérer vos projets avec CollabTask",
     "fullName": "Nom complet",
     "email": "Adresse e-mail",
@@ -25,7 +25,7 @@
     "alreadyHaveAccount": "Vous avez déjà un compte ?",
     "register": "S'inscrire",
     "registration": "Inscription en cours...",
-    "signOAuth": "Se connecter {action} avec {provider}",
+    "signOAuth": "Continuer avec {provider}",
     "Error": {
       "fullNameError": "Veuillez entrer votre nom complet.",
       "emailError": "Veuillez entrer une adresse e-mail valide.",

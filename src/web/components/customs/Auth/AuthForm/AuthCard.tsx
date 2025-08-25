@@ -1,7 +1,9 @@
 import { useTranslations } from "next-intl"
 import { ReactNode } from "react"
-import { SignOAuthButton } from "../Buttons/SignOAuthButton"
-import { DividerWithText } from "./DividerWithText"
+
+import { DividerWithText } from "@/web/components/customs/Auth/AuthForm/DividerWithText"
+import { SignOAuthButton } from "@/web/components/customs/Auth/Buttons/SignOAuthButton"
+import { CircleIcon } from "@/web/components/customs/Utils/CircleIcon"
 
 type Props = {
   title: string
@@ -14,9 +16,12 @@ type Props = {
 export function AuthCard({ title, description, children, showOAuth = true, signup }: Props) {
   const t = useTranslations("Global")
   return (
-    <div className="flex flex-col border p-6 rounded-lg shadow-lg max-w-md w-full gap-5">
-      <div>
-        <h1 className="text-2xl font-bold text-center">{title}</h1>
+    <div className="flex flex-col border p-6 rounded-lg shadow-lg max-w-md w-full gap-5 overflow-hidden">
+      <div className="flex flex-col justify-center items-center gap-2">
+        <h1 className="text-2xl font-bold text-center flex items-center gap-2">
+          <CircleIcon />
+          {title}
+        </h1>
         <p className="text-center text-gray-600 text-sm">{description}</p>
       </div>
 
@@ -25,7 +30,7 @@ export function AuthCard({ title, description, children, showOAuth = true, signu
       {showOAuth && (
         <>
           <DividerWithText text={t("or")} />
-          <SignOAuthButton signUp={signup ?? false} />
+          <SignOAuthButton />
         </>
       )}
     </div>
