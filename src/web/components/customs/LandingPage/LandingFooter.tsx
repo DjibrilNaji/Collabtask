@@ -7,9 +7,9 @@ export default function LandingFooter() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
             <CircleIcon />
-            <span className="font-bold text-xl">TaskBuddy</span>
+            <span className="font-bold text-xl">Collab Task</span>
           </div>
-          <p className="text-gray-400">© 2025 TaskBuddy.</p>
+          <p className="text-gray-400">© 2025 Collab Task.</p>
         </div>
       </div>
     </footer>

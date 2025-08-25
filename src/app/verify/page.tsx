@@ -1,5 +1,6 @@
-import { routes } from "@/web/routes"
 import { redirect } from "next/navigation"
+
+import { routes } from "@/web/routes"
 
 interface PageProps {
   searchParams: Promise<{ error: string }>

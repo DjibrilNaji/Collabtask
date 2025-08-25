@@ -14,7 +14,7 @@
     "signUp": "Try it now"
   },
   "Form": {
-    "title": "Create your account",
+    "title": "Sign up for CollabTask",
     "description": "Start managing your projects with CollabTask",
     "fullName": "Full Name",
     "email": "Email Address",
@@ -25,7 +25,7 @@
     "alreadyHaveAccount": "Already have an account?",
     "register": "Register",
     "registration": "Registering...",
-    "signOAuth": "Sign {action} with {provider}",
+    "signOAuth": "Continue with {provider}",
     "Error": {
       "fullNameError": "Please enter your full name.",
       "emailError": "Please enter a valid email address.",

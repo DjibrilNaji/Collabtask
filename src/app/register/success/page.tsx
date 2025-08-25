@@ -1,11 +1,11 @@
 import { ArrowLeft, CheckCircle } from "lucide-react"
+import { Metadata } from "next"
+import { useTranslations } from "next-intl"
 import Link from "next/link"
 
 import { Button } from "@/web/components/ui/button"
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/web/components/ui/card"
 import { routes } from "@/web/routes"
-import { Metadata } from "next"
-import { useTranslations } from "next-intl"
 
 export const metadata: Metadata = {
   title: "Registration Success",

@@ -1,6 +1,5 @@
 export const routes = {
   home: "/",
-
   auth: {
     login: {
       path: "/login",
@@ -14,6 +13,5 @@ export const routes = {
     forgotPassword: "/forgot-password",
     verifyEmail: "/verify"
   },
-
   profile: "/profile"
 }

@@ -1,5 +1,6 @@
-import LandingPage from "@/web/components/customs/LandingPage/LandingPage"
 import { Metadata } from "next"
+
+import LandingPage from "@/web/components/customs/LandingPage/LandingPage"
 
 export const metadata: Metadata = {
   title: "Collab Task",

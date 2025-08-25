@@ -2,7 +2,6 @@ import { Metadata } from "next"
 import { useTranslations } from "next-intl"
 
 import { AuthCard } from "@/web/components/customs/Auth/AuthForm/AuthCard"
-import { AuthHeader } from "@/web/components/customs/Auth/AuthForm/AuthHeader"
 import { RegisterForm } from "@/web/components/customs/Auth/AuthForm/RegisterForm"
 import { LocaleDropdown } from "@/web/components/customs/Utils/LocaleDropdown"
 import { ModeToggle } from "@/web/components/customs/Utils/ModeToggle"
@@ -21,8 +20,7 @@ export default function RegisterPage() {
         <LocaleDropdown />
         <ModeToggle />
       </div>
-      <div className="flex flex-col items-center justify-center h-full">
-        <AuthHeader />
+      <div className="flex flex-col items-center justify-center h-full mx-4">
         <AuthCard title={t("title")} description={t("description")} signup>
           <RegisterForm />
         </AuthCard>

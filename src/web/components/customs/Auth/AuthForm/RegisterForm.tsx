@@ -5,6 +5,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query"
 import { LoaderCircleIcon } from "lucide-react"
 import { useTranslations } from "next-intl"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { useForm } from "react-hook-form"
 import { toast } from "sonner"
 import z from "zod"
@@ -22,7 +23,6 @@ import {
 } from "@/web/components/ui/form"
 import { Input } from "@/web/components/ui/input"
 import { routes } from "@/web/routes"
-import { useRouter } from "next/navigation"
 
 export const RegisterForm = () => {
   const queryClient = useQueryClient()
@@ -92,7 +92,7 @@ export const RegisterForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormLabel>
-                <div className="flex justify-between items-center w-full">
+                <div className="flex justify-between items-center w-full gap-4">
                   {t("Form.password")}
 
                   <Link
