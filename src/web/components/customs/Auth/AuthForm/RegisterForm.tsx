@@ -91,18 +91,7 @@ export const RegisterForm = () => {
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>
-                <div className="flex justify-between items-center w-full gap-4">
-                  {t("Form.password")}
-
-                  <Link
-                    href={routes.auth.forgotPassword}
-                    className="text-sm italic text-gray-500 hover:underline"
-                  >
-                    {t("Form.forgotPassword")}
-                  </Link>
-                </div>
-              </FormLabel>
+              <FormLabel>{t("Form.password")}</FormLabel>
               <FormControl>
                 <Input type="password" placeholder="********" {...field} />
               </FormControl>
