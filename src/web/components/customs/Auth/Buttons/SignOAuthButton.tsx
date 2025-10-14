@@ -1,5 +1,6 @@
 "use client"
 
+import { LoaderCircleIcon } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { useState } from "react"
 import { FcGoogle } from "react-icons/fc"
@@ -26,6 +27,9 @@ export const SignOAuthButton = () => {
 
   return (
     <Button effect="ringHover" onClick={handleClick} disabled={isPending}>
+      {isPending && (
+        <LoaderCircleIcon className="-ms-1 animate-spin" size={16} aria-hidden="true" />
+      )}
       <FcGoogle />
       {t("signOAuth", { provider: "Google" })}
     </Button>

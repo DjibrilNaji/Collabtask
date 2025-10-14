@@ -1,5 +1,3 @@
-"use client"
-
 import { CircleIcon } from "@/web/components/customs/Utils/CircleIcon"
 
 export const AuthHeader = () => {

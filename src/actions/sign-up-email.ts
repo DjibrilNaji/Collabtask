@@ -28,6 +28,6 @@ export async function signUpEmailAction(values: SignupType) {
       }
     }
 
-    return { error: "INTERNAL_SERVER_ERROR" }
+    throw new Error("INTERNAL_SERVER_ERROR")
   }
 }
