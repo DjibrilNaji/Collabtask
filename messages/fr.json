@@ -32,7 +32,7 @@
     "Error": {
       "fullNameError": "Veuillez entrer votre nom complet.",
       "emailError": "Veuillez entrer une adresse e-mail valide.",
-      "passwordError": "Le mot de passe doit contenir au moins 10 caractères, dont une majuscule, une minuscule, un chiffre et un caractère spécial.",
+      "passwordError": "Veuillez entrer votre mot de passe.",
       "passwordLengthError": "Le mot de passe doit comporter au moins 10 caractères.",
       "passwordComplexityError": "Le mot de passe doit contenir au moins une majuscule, une minuscule, un chiffre et un caractère spécial."
     },

@@ -9,25 +9,20 @@ export async function signUpEmailAction(values: SignupType) {
   const { name, email, password } = values
 
   try {
-    await auth.api.signUpEmail({
-      body: {
-        name,
-        email,
-        password
-      }
+    const res = await auth.api.signUpEmail({
+      body: { name, email, password }
     })
+
+    return { success: true, response: res }
   } catch (err) {
     if (err instanceof APIError) {
-      const errCode = err.body ? (err.body.code as ErrorCode) : "UNKNOWN"
+      const errCode = err.body?.code as ErrorCode
 
-      switch (errCode) {
-        case "USER_ALREADY_EXISTS":
-          throw new Error("USER_ALREADY_EXISTS")
-        default:
-          throw new Error("UNKNOWN_ERROR")
-      }
+      console.error("BetterAuth signup error:", errCode)
+      return { error: errCode }
     }
 
-    throw new Error("INTERNAL_SERVER_ERROR")
+    console.error("Unexpected signup error:", err)
+    return { error: "INTERNAL_SERVER_ERROR" }
   }
 }

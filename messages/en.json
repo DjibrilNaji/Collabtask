@@ -32,7 +32,7 @@
     "Error": {
       "fullNameError": "Please enter your full name.",
       "emailError": "Please enter a valid email address.",
-      "passwordError": "Password must contain at least 10 characters, including 1 uppercase letter, 1 lowercase letter, 1 digit, and 1 special character.",
+      "passwordError": "Please enter your password.",
       "passwordLengthError": "Password must be at least 10 characters long.",
       "passwordComplexityError": "Password must include at least one uppercase letter, one lowercase letter, one digit, and one special character."
     },

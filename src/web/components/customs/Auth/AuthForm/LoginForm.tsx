@@ -11,6 +11,7 @@ import { toast } from "sonner"
 import z from "zod"
 
 import { signInEmailAction } from "@/actions/sign-in-email"
+import { allowedErrorCodes } from "@/types/allowedErrorCodes"
 import { signinFormSchema, SigninType } from "@/types/formTypes"
 import { Button } from "@/web/components/ui/button"
 import {
@@ -38,13 +39,22 @@ export const LoginForm = () => {
 
   const mutation = useMutation({
     mutationFn: (values: SigninType) => signInEmailAction(values),
-    onSuccess: async () => {
+    onSuccess: async (res) => {
+      if (res?.error) {
+        const errorKey = allowedErrorCodes.includes(res.error)
+          ? `GlobalErrors.${res.error}`
+          : "GlobalErrors.UNKNOWN_ERROR"
+        toast.error(t(errorKey))
+
+        return
+      }
+
       form.reset()
       toast.success(t("GlobalSuccess.LOGIN_SUCCESS"))
       router.push(routes.profile)
     },
-    onError: (error) => {
-      toast.error(t("GlobalErrors." + error.message))
+    onError: () => {
+      toast.error(t("GlobalErrors.INTERNAL_SERVER_ERROR"))
     }
   })
 
