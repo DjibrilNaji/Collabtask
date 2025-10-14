@@ -14,7 +14,8 @@
     "signUp": "Essayer maintenant"
   },
   "Form": {
-    "title": "Inscrivez-vous à CollabTask",
+    "loginTitle": "Se connecter à CollabTask",
+    "registerTitle": "S'inscrire à CollabTask",
     "description": "Commencez à gérer vos projets avec CollabTask",
     "fullName": "Nom complet",
     "email": "Adresse e-mail",
@@ -23,8 +24,10 @@
     "forgotPassword": "Mot de passe oublié ?",
     "login": "Se connecter",
     "alreadyHaveAccount": "Vous avez déjà un compte ?",
+    "noAccount": "Vous n'avez pas de compte ?",
     "register": "S'inscrire",
     "registration": "Inscription en cours...",
+    "connection": "Connexion en cours...",
     "signOAuth": "Continuer avec {provider}",
     "Error": {
       "fullNameError": "Veuillez entrer votre nom complet.",
@@ -40,11 +43,35 @@
   },
   "GlobalErrors": {
     "ERROR_TITLE": "Erreur",
-    "USER_ALREADY_EXISTS": "Un utilisateur avec cet e-mail existe déjà.",
-    "UNKNOWN_ERROR": "Une erreur inattendue est survenue. Veuillez réessayer plus tard.",
-    "INTERNAL_SERVER_ERROR": "Une erreur interne du serveur est survenue. Veuillez réessayer plus tard."
+    "USER_NOT_FOUND": "Utilisateur introuvable.",
+    "FAILED_TO_CREATE_USER": "Échec de la création de l'utilisateur.",
+    "FAILED_TO_CREATE_SESSION": "Échec de la création de la session.",
+    "FAILED_TO_UPDATE_USER": "Échec de la mise à jour de l'utilisateur.",
+    "FAILED_TO_GET_SESSION": "Échec de la récupération de la session.",
+    "INVALID_PASSWORD": "Mot de passe invalide.",
+    "INVALID_EMAIL": "Adresse e-mail invalide.",
+    "INVALID_EMAIL_OR_PASSWORD": "Adresse e-mail ou mot de passe incorrect.",
+    "SOCIAL_ACCOUNT_ALREADY_LINKED": "Ce compte social est déjà lié à un autre utilisateur.",
+    "PROVIDER_NOT_FOUND": "Fournisseur d'authentification introuvable.",
+    "INVALID_TOKEN": "Jeton invalide.",
+    "ID_TOKEN_NOT_SUPPORTED": "Le jeton d'identité n'est pas pris en charge.",
+    "FAILED_TO_GET_USER_INFO": "Échec de la récupération des informations de l'utilisateur.",
+    "USER_EMAIL_NOT_FOUND": "Adresse e-mail de l'utilisateur introuvable.",
+    "EMAIL_NOT_VERIFIED": "Votre adresse e-mail n'a pas été vérifiée.",
+    "PASSWORD_TOO_SHORT": "Le mot de passe est trop court.",
+    "PASSWORD_TOO_LONG": "Le mot de passe est trop long.",
+    "USER_ALREADY_EXISTS": "Un utilisateur avec cette adresse e-mail existe déjà.",
+    "EMAIL_CAN_NOT_BE_UPDATED": "L'adresse e-mail ne peut pas être modifiée.",
+    "CREDENTIAL_ACCOUNT_NOT_FOUND": "Compte d'identification introuvable.",
+    "SESSION_EXPIRED": "Votre session a expiré. Veuillez vous reconnecter.",
+    "FAILED_TO_UNLINK_LAST_ACCOUNT": "Impossible de dissocier le dernier compte lié.",
+    "ACCOUNT_NOT_FOUND": "Compte introuvable.",
+    "USER_ALREADY_HAS_PASSWORD": "L'utilisateur possède déjà un mot de passe.",
+    "UNKNOWN_ERROR": "Une erreur inconnue s'est produite. Veuillez réessayer plus tard.",
+    "INTERNAL_SERVER_ERROR": "Une erreur interne du serveur s'est produite. Veuillez réessayer plus tard."
   },
   "GlobalSuccess": {
-    "REGISTRATION_SUCCESS": "Inscription réussie !"
+    "REGISTRATION_SUCCESS": "Inscription réussie !",
+    "LOGIN_SUCCESS": "Connexion réussie !"
   }
 }
