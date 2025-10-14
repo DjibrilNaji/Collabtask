@@ -17,7 +17,9 @@ export type SignupType = z.infer<typeof signupFormSchema>
 export const signinFormSchema = z
   .object({
     email: emailValidator,
-    password: stringValidator
+    password: stringValidator.min(1, {
+      message: "Error.passwordError"
+    })
   })
   .required()
 

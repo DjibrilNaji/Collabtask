@@ -40,14 +40,19 @@ export const RegisterForm = () => {
 
   const mutation = useMutation({
     mutationFn: (values: SignupType) => signUpEmailAction(values),
-    onSuccess: async () => {
+    onSuccess: async (res) => {
+      if (res?.error) {
+        toast.error(t("GlobalErrors." + res.error))
+        return
+      }
+
       form.reset()
       toast.success(t("GlobalSuccess.REGISTRATION_SUCCESS"))
       await queryClient.invalidateQueries({ queryKey: ["users"] })
       router.push(routes.auth.register.success)
     },
-    onError: (error) => {
-      toast.error(t("GlobalErrors." + error.message))
+    onError: () => {
+      toast.error(t("GlobalErrors.INTERNAL_SERVER_ERROR"))
     }
   })
 

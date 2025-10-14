@@ -11,22 +11,23 @@ export async function signInEmailAction(values: SigninType) {
   const { email, password } = values
 
   try {
-    await auth.api.signInEmail({
+    const response = await auth.api.signInEmail({
       headers: await headers(),
       body: { email, password }
     })
+
+    return { success: true, response }
   } catch (err) {
     if (err instanceof APIError) {
-      const errCode = err.body ? (err.body.code as ErrorCode) : "UNKNOWN"
+      const errCode = err.body?.code as ErrorCode
 
-      switch (errCode) {
-        case "EMAIL_NOT_VERIFIED":
-          redirect("/auth/verify?error=email_not_verified")
-        default:
-          throw new Error(errCode)
+      if (errCode === "EMAIL_NOT_VERIFIED") {
+        redirect("/auth/verify?error=email_not_verified")
       }
+
+      return { error: errCode || "UNKNOWN_ERROR" }
     }
 
-    throw new Error("INTERNAL_SERVER_ERROR")
+    return { error: "INTERNAL_SERVER_ERROR" }
   }
 }

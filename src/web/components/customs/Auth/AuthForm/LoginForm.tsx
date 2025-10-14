@@ -38,13 +38,18 @@ export const LoginForm = () => {
 
   const mutation = useMutation({
     mutationFn: (values: SigninType) => signInEmailAction(values),
-    onSuccess: async () => {
+    onSuccess: async (res) => {
+      if (res?.error) {
+        toast.error(t("GlobalErrors." + res.error))
+        return
+      }
+
       form.reset()
       toast.success(t("GlobalSuccess.LOGIN_SUCCESS"))
       router.push(routes.profile)
     },
-    onError: (error) => {
-      toast.error(t("GlobalErrors." + error.message))
+    onError: () => {
+      toast.error(t("GlobalErrors.INTERNAL_SERVER_ERROR"))
     }
   })
 
