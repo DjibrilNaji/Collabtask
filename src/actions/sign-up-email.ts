@@ -16,7 +16,7 @@ export async function signUpEmailAction(values: SignupType) {
     return { success: true, response: res }
   } catch (err) {
     if (err instanceof APIError) {
-      const errCode = err.body ? (err.body.code as ErrorCode) : "UNKNOWN_ERROR"
+      const errCode = err.body?.code as ErrorCode
 
       console.error("BetterAuth signup error:", errCode)
       return { error: errCode }

@@ -11,6 +11,7 @@ import { toast } from "sonner"
 import z from "zod"
 
 import { signUpEmailAction } from "@/actions/sign-up-email"
+import { allowedErrorCodes } from "@/types/allowedErrorCodes"
 import { signupFormSchema, SignupType } from "@/types/formTypes"
 import { Button } from "@/web/components/ui/button"
 import {
@@ -42,7 +43,11 @@ export const RegisterForm = () => {
     mutationFn: (values: SignupType) => signUpEmailAction(values),
     onSuccess: async (res) => {
       if (res?.error) {
-        toast.error(t("GlobalErrors." + res.error))
+        const errorKey = allowedErrorCodes.includes(res.error)
+          ? `GlobalErrors.${res.error}`
+          : "GlobalErrors.UNKNOWN_ERROR"
+        toast.error(t(errorKey))
+
         return
       }
 
