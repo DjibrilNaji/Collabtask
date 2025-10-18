@@ -1,5 +1,5 @@
 import prisma from "@/lib/prisma"
-import User from "@/types/User"
+import { Prisma } from "@prisma/client"
 
 export const getUserById = async (id: string) =>
   await prisma.user.findUnique({
@@ -14,8 +14,9 @@ export const getUserById = async (id: string) =>
     }
   })
 
-export const updateUserById = async (id: string, data: Partial<User>) =>
+export const updateUserById = async (id: string, data: Prisma.UserUpdateInput) =>
   await prisma.user.update({
     where: { id },
-    data
+    data,
+    select: { id: true, name: true, email: true }
   })

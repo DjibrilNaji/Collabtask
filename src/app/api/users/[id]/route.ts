@@ -35,6 +35,10 @@ export async function PUT(req: Request, { params }: { params: Promise<{ id: stri
   try {
     const { id: userId } = await params
 
+    if (session.user.id !== userId) {
+      return NextResponse.json({ error: "Forbidden" }, { status: 403 })
+    }
+
     const user = await getUserById(userId)
 
     if (!user) {
@@ -43,12 +47,7 @@ export async function PUT(req: Request, { params }: { params: Promise<{ id: stri
 
     const userData = await req.json()
 
-    const updatedUser = {
-      id: userId,
-      ...userData
-    }
-
-    await updateUserById(userId, updatedUser)
+    const updatedUser = await updateUserById(userId, userData)
 
     return NextResponse.json(updatedUser, { status: 200 })
   } catch (error) {
