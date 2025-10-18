@@ -24,3 +24,14 @@ export const signinFormSchema = z
   .required()
 
 export type SigninType = z.infer<typeof signinFormSchema>
+
+export const updateFormSchema = z
+  .object({
+    name: stringValidator.min(2, {
+      message: "Error.fullNameError"
+    }),
+    email: emailValidator
+  })
+  .required()
+
+export type UpdateType = z.infer<typeof updateFormSchema>

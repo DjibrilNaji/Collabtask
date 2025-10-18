@@ -1,5 +1,6 @@
 {
   "Global": {
+    "back": "Retour",
     "goBackToLogin": "Retour à la connexion",
     "or": "ou"
   },
@@ -11,7 +12,22 @@
   "LandingPage": {
     "title": "Bienvenue sur CollabTask",
     "signIn": "Se connecter",
-    "signUp": "Essayer maintenant"
+    "signUp": "Essayer maintenant",
+    "myAccount": "Mon compte",
+    "manageYourInfo": "Gérer vos informations personnelles"
+  },
+  "Profile": {
+    "personalInfo": "Informations personnelles",
+    "updateProfileInfo": "Mettez à jour vos informations de profil",
+    "emailChangeNotice": "Si vous changez votre adresse e-mail, vous devrez vérifier la nouvelle adresse avant de pouvoir vous connecter à nouveau.",
+    "myAccount": "Mon compte",
+    "manageYourInfo": "Gérer vos informations personnelles",
+    "security": "Sécurité",
+    "emailVerified": "E-mail vérifié",
+    "verified": "Vérifié",
+    "notVerified": "Non vérifié",
+    "twoFactorAuthentication": "Authentification à deux facteurs",
+    "configure": "Configurer"
   },
   "Form": {
     "loginTitle": "Se connecter à CollabTask",
@@ -29,6 +45,7 @@
     "registration": "Inscription en cours...",
     "connection": "Connexion en cours...",
     "signOAuth": "Continuer avec {provider}",
+    "save": "Enregistrer",
     "Error": {
       "fullNameError": "Veuillez entrer votre nom complet.",
       "emailError": "Veuillez entrer une adresse e-mail valide.",
@@ -40,6 +57,13 @@
       "registrationSuccess": "Inscription réussie !",
       "emailVerification": "Vérifiez votre e-mail pour la vérification."
     }
+  },
+  "ErrorState": {
+    "title": "Oups !",
+    "defaultMessage": "Une erreur est survenue. Veuillez réessayer plus tard.",
+    "profileMessage": "Une erreur est survenue lors du chargement de votre profil. Veuillez réessayer plus tard.",
+    "retry": "Réessayer",
+    "home": "Accueil"
   },
   "GlobalErrors": {
     "ERROR_TITLE": "Erreur",

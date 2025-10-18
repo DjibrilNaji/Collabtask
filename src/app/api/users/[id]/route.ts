@@ -1,0 +1,32 @@
+import { NextResponse } from "next/server"
+
+import { auth } from "@/lib/auth"
+import { getUserById } from "@/lib/query/user/getUser"
+
+interface Params {
+  params: {
+    id: string
+  }
+}
+
+export async function GET(req: Request, { params }: Params) {
+  const session = await auth.api.getSession({ headers: req.headers })
+
+  if (!session) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
+  }
+
+  try {
+    const { id: userId } = await params
+
+    const user = await getUserById(userId)
+
+    if (!user) {
+      return NextResponse.json({ error: "User not found" }, { status: 404 })
+    }
+
+    return NextResponse.json(user, { status: 200 })
+  } catch (error) {
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 })
+  }
+}

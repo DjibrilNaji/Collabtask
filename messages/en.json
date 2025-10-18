@@ -1,5 +1,6 @@
 {
   "Global": {
+    "back": "Back",
     "goBackToLogin": "Back to Login",
     "or": "or"
   },
@@ -12,6 +13,19 @@
     "title": "Welcome to CollabTask",
     "signIn": "Sign In",
     "signUp": "Try it now"
+  },
+  "Profile": {
+    "personalInfo": "Profile information",
+    "updateProfileInfo": "Update your profile information",
+    "emailChangeNotice": "If you change your email address, you will need to verify the new address before you can log in again.",
+    "myAccount": "My Account",
+    "manageYourInfo": "Manage your personal information",
+    "security": "Security",
+    "emailVerified": "Email Verified",
+    "verified": "Verified",
+    "notVerified": "Not Verified",
+    "twoFactorAuthentication": "Two-Factor Authentication",
+    "configure": "Configure"
   },
   "Form": {
     "loginTitle": "Log in to CollabTask",
@@ -29,6 +43,7 @@
     "registration": "Registering...",
     "connection": "Connecting...",
     "signOAuth": "Continue with {provider}",
+    "save": "Save",
     "Error": {
       "fullNameError": "Please enter your full name.",
       "emailError": "Please enter a valid email address.",
@@ -40,6 +55,13 @@
       "registrationSuccess": "Registration successful!",
       "emailVerification": "Check your email for verification."
     }
+  },
+  "ErrorState": {
+    "title": "Oops!",
+    "defaultMessage": "An error occurred. Please try again later.",
+    "profileMessage": "An error occurred while loading your profile. Please try again later.",
+    "retry": "Retry",
+    "home": "Home"
   },
   "GlobalErrors": {
     "ERROR_TITLE": "Error",
