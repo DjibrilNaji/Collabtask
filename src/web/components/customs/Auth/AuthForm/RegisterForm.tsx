@@ -2,7 +2,6 @@
 
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useMutation, useQueryClient } from "@tanstack/react-query"
-import { LoaderCircleIcon } from "lucide-react"
 import { useTranslations } from "next-intl"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
@@ -23,6 +22,7 @@ import {
   FormMessage
 } from "@/web/components/ui/form"
 import { Input } from "@/web/components/ui/input"
+import { Spinner } from "@/web/components/ui/spinner"
 import { routes } from "@/web/routes"
 
 export const RegisterForm = () => {
@@ -113,7 +113,7 @@ export const RegisterForm = () => {
         <Button type="submit" effect="ringHover" disabled={mutation.isPending}>
           {mutation.isPending ? (
             <>
-              <LoaderCircleIcon className="-ms-1 animate-spin" size={16} aria-hidden="true" />
+              <Spinner />
               {t("Form.registration")}
             </>
           ) : (

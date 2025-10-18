@@ -13,5 +13,8 @@ export const routes = {
     forgotPassword: "/forgot-password",
     verifyEmail: "/verify"
   },
-  profile: "/profile"
+  profile: "/profile",
+  api: {
+    userById: (id: string) => `/api/users/${id}`
+  }
 }
