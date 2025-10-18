@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl"
 import { useRouter } from "next/navigation"
 
 import { ModeToggle } from "@/web/components/customs/Utils/ModeToggle"
+import { routes } from "@/web/routes"
 
 export default function ProfileHeader() {
   const t = useTranslations()
@@ -14,7 +15,7 @@ export default function ProfileHeader() {
     <header className="border-b sticky top-0 z-50 bg-background">
       <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
         <button
-          onClick={() => router.back()}
+          onClick={() => router.push(routes.dashboard)}
           className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
         >
           <ArrowLeft size={20} />

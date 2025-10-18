@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server"
 
 import { auth } from "@/lib/auth"
-import { getUserById } from "@/lib/query/user/getUser"
+import { getUserById, updateUserById } from "@/lib/query/user/user-query"
 
 export async function GET(req: Request, { params }: { params: Promise<{ id: string }> }) {
   const session = await auth.api.getSession({ headers: req.headers })
@@ -20,6 +20,37 @@ export async function GET(req: Request, { params }: { params: Promise<{ id: stri
     }
 
     return NextResponse.json(user, { status: 200 })
+  } catch (error) {
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 })
+  }
+}
+
+export async function PUT(req: Request, { params }: { params: Promise<{ id: string }> }) {
+  const session = await auth.api.getSession({ headers: req.headers })
+
+  if (!session) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
+  }
+
+  try {
+    const { id: userId } = await params
+
+    const user = await getUserById(userId)
+
+    if (!user) {
+      return NextResponse.json({ error: "User not found" }, { status: 404 })
+    }
+
+    const userData = await req.json()
+
+    const updatedUser = {
+      id: userId,
+      ...userData
+    }
+
+    await updateUserById(userId, updatedUser)
+
+    return NextResponse.json(updatedUser, { status: 200 })
   } catch (error) {
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 })
   }

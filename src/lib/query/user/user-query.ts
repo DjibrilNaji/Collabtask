@@ -1,4 +1,5 @@
 import prisma from "@/lib/prisma"
+import User from "@/types/User"
 
 export const getUserById = async (id: string) =>
   await prisma.user.findUnique({
@@ -11,4 +12,10 @@ export const getUserById = async (id: string) =>
       avatar_url: true,
       createdAt: true
     }
+  })
+
+export const updateUserById = async (id: string, data: Partial<User>) =>
+  await prisma.user.update({
+    where: { id },
+    data
   })
