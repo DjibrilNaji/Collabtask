@@ -3,13 +3,7 @@ import { NextResponse } from "next/server"
 import { auth } from "@/lib/auth"
 import { getUserById } from "@/lib/query/user/getUser"
 
-interface Params {
-  params: {
-    id: string
-  }
-}
-
-export async function GET(req: Request, { params }: Params) {
+export async function GET(req: Request, { params }: { params: Promise<{ id: string }> }) {
   const session = await auth.api.getSession({ headers: req.headers })
 
   if (!session) {

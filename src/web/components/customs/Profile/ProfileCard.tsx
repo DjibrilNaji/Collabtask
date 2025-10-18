@@ -20,7 +20,7 @@ export default function ProfileCard({ user }: ProfileCardProps) {
           </AvatarFallback>
         </Avatar>
 
-        <label className="absolute bottom-0 right-0 w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white border-2 border-whitecursor-pointer">
+        <label className="absolute bottom-0 right-0 w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white border-2 border-white cursor-pointer">
           <input type="file" className="hidden" />
           <Camera />
         </label>
