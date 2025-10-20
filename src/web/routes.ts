@@ -14,6 +14,7 @@ export const routes = {
     verifyEmail: "/verify"
   },
   profile: "/profile",
+  dashboard: "/dashboard",
   api: {
     userById: (id: string) => `/api/users/${id}`
   }

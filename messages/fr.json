@@ -27,7 +27,8 @@
     "verified": "Vérifié",
     "notVerified": "Non vérifié",
     "twoFactorAuthentication": "Authentification à deux facteurs",
-    "configure": "Configurer"
+    "configure": "Configurer",
+    "updatedSuccessfully": "Profil mis à jour avec succès"
   },
   "Form": {
     "loginTitle": "Se connecter à CollabTask",
