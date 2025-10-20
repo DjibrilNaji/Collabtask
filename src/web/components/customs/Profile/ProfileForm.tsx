@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form"
 import { toast } from "sonner"
 import z from "zod"
 
+import { updateUserAction } from "@/actions/update-user"
 import { updateFormSchema, UpdateType } from "@/types/formTypes"
 import User from "@/types/User"
 import { Button } from "@/web/components/ui/button"
@@ -21,7 +22,6 @@ import {
 } from "@/web/components/ui/form"
 import { Input } from "@/web/components/ui/input"
 import { Spinner } from "@/web/components/ui/spinner"
-import { userService } from "@/web/services/user-service"
 
 interface ProfileProps {
   user: User
@@ -40,9 +40,7 @@ export default function ProfileForm({ user }: ProfileProps) {
   })
 
   const mutation = useMutation({
-    mutationFn: async (data: UpdateType) => {
-      await userService.updateById(user.id, data)
-    },
+    mutationFn: async (data: UpdateType) => await updateUserAction(user.id, data),
     onSuccess: async () => {
       toast.success(t("Profile.updatedSuccessfully"))
 
