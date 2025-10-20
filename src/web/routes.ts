@@ -2,16 +2,16 @@ export const routes = {
   home: "/",
   auth: {
     login: {
-      path: "/login",
+      path: "/auth/login",
       callback: "/",
       error: "/auth/login/error"
     },
     register: {
-      path: "/register",
-      success: "/register/success"
+      path: "/auth/register",
+      success: "/auth/register/success"
     },
-    forgotPassword: "/forgot-password",
-    verifyEmail: "/verify"
+    forgotPassword: "/auth/forgot-password",
+    verifyEmail: "/auth/verify"
   },
   profile: "/profile",
   dashboard: "/dashboard",
