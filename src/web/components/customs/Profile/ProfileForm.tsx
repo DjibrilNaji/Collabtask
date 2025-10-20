@@ -40,7 +40,12 @@ export default function ProfileForm({ user }: ProfileProps) {
   })
 
   const mutation = useMutation({
-    mutationFn: async (data: UpdateType) => await updateUserAction(data),
+    mutationFn: async (data: UpdateType) => {
+      if (data.email === user.email && data.name === user.name) {
+        return
+      }
+      await updateUserAction(data)
+    },
     onSuccess: async () => {
       toast.success(t("Profile.updatedSuccessfully"))
 

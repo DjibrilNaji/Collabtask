@@ -2,7 +2,8 @@
   "Global": {
     "back": "Back",
     "goBackToLogin": "Back to Login",
-    "or": "or"
+    "or": "or",
+    "logout": "Log Out"
   },
   "LocaleSwitcher": {
     "label": "Choose Language",
