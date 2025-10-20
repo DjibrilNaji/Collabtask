@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server"
 
 import { routes } from "@/web/routes"
 
-const protectedRoutes = ["/profile", "/dashboard"]
+const protectedRoutes = [routes.profile, routes.dashboard]
 
 export async function middleware(req: NextRequest) {
   const { nextUrl } = req
