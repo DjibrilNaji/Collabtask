@@ -2,7 +2,8 @@
   "Global": {
     "back": "Retour",
     "goBackToLogin": "Retour à la connexion",
-    "or": "ou"
+    "or": "ou",
+    "logout": "Se déconnecter"
   },
   "LocaleSwitcher": {
     "label": "Choisir la langue",
