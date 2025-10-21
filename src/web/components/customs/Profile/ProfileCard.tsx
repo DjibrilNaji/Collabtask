@@ -7,6 +7,7 @@ import { FormEventHandler, useRef, useState } from "react"
 import { toast } from "sonner"
 
 import { upload } from "@/actions/upload"
+import { handleAppError } from "@/lib/error"
 import User from "@/types/User"
 import { Avatar, AvatarFallback, AvatarImage } from "@/web/components/ui/avatar"
 import { Button } from "@/web/components/ui/button"
@@ -52,9 +53,7 @@ export default function ProfileCard({ user }: ProfileCardProps) {
       toast.success(t("GlobalSuccess.UPLOAD_SUCCESS"))
       await queryClient.invalidateQueries({ queryKey: ["user"] })
     },
-    onError: () => {
-      toast.error(t("GlobalErrors.INTERNAL_SERVER_ERROR"))
-    }
+    onError: (err) => handleAppError(t, err)
   })
 
   const handleUpload: FormEventHandler<HTMLFormElement> = (e) => {

@@ -98,7 +98,8 @@
     "USER_ALREADY_HAS_PASSWORD": "L'utilisateur possède déjà un mot de passe.",
     "UNKNOWN_ERROR": "Une erreur inconnue s'est produite. Veuillez réessayer plus tard.",
     "INTERNAL_SERVER_ERROR": "Une erreur interne du serveur s'est produite. Veuillez réessayer plus tard.",
-    "ERROR_FILE_SIZE_TOO_LARGE": "La taille du fichier dépasse la limite autorisée de {size} Mo."
+    "ERROR_FILE_SIZE_TOO_LARGE": "La taille du fichier dépasse la limite autorisée de {size} Mo.",
+    "UPLOAD_MONTHLY_LIMIT_REACHED": "Vous avez atteint votre limite mensuelle de 2 téléchargements de fichiers."
   },
   "GlobalSuccess": {
     "REGISTRATION_SUCCESS": "Inscription réussie !",
