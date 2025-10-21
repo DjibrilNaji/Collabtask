@@ -75,7 +75,7 @@ export default function ProfileCard({ user }: ProfileCardProps) {
           <div className="relative">
             <Avatar className="w-28 h-28">
               <AvatarImage
-                src={preview || user.image}
+                src={preview || user.image || undefined}
                 alt="Profile picture"
                 className="object-cover"
               />

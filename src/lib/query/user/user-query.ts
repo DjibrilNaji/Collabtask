@@ -8,7 +8,6 @@ export const getUserById = async (id: string) =>
       name: true,
       email: true,
       emailVerified: true,
-      avatar_url: true,
       image: true,
       createdAt: true
     }
