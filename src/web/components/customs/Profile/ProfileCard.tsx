@@ -42,7 +42,7 @@ export default function ProfileCard({ user }: ProfileCardProps) {
   }
 
   const mutation = useMutation({
-    mutationFn: async (formData: FormData) => await upload(formData),
+    mutationFn: async (formData: FormData) => await upload(formData, user.image),
     onSuccess: async () => {
       if (fileInputRef.current) {
         fileInputRef.current.value = ""
