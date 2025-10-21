@@ -9,6 +9,7 @@ export const getUserById = async (id: string) =>
       email: true,
       emailVerified: true,
       avatar_url: true,
+      image: true,
       createdAt: true
     }
   })

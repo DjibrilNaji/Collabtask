@@ -4,6 +4,7 @@ type User = {
   email: string
   emailVerified: boolean
   avatar_url?: string
+  image?: string
   createdAt: string
 }
 
