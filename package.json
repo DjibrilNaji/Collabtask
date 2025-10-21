@@ -16,6 +16,7 @@
     "seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
+    "@heroui/react": "^2.8.5",
     "@hookform/resolvers": "^5.2.1",
     "@prisma/client": "^6.17.1",
     "@prisma/extension-accelerate": "^2.0.2",
@@ -31,6 +32,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
+    "framer-motion": "^12.23.24",
     "lucide-react": "^0.525.0",
     "motion": "^12.23.24",
     "next": "15.4.2",

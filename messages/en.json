@@ -12,9 +12,55 @@
     "fr": "French"
   },
   "LandingPage": {
-    "title": "Welcome to Taskly",
+    "titleMainPart1": "Simplify the collaborative",
+    "titleMainPart2": "management of your tasks",
+    "subtitle1": "Organize your projects, collaborate in real-time, and deliver faster.",
+    "subtitle2": "A modern, fast platform designed for teams.",
+    "demo": "See the demo",
+    "getStarted": "Get Started",
+    "adopted": "Already adopted by thousands of teams to deliver faster.",
+    "sectionTitle": "Everything you need for team productivity",
+    "sectionDescription": "Powerful features designed for collaboration and project delivery.",
+    "features": {
+      "teamCollaboration": {
+        "title": "Team Collaboration",
+        "description": "Seamless work with real-time updates and shared projects."
+      },
+      "taskManagement": {
+        "title": "Task Management",
+        "description": "Create, assign, and track tasks with customizable statuses and priorities."
+      },
+      "realtimeComments": {
+        "title": "Real-time Comments",
+        "description": "Discuss tasks via threaded comments and instant notifications."
+      },
+      "liveNotifications": {
+        "title": "Live Notifications",
+        "description": "Stay updated on your projects' activities and changes."
+      },
+      "projectPlanning": {
+        "title": "Project Planning",
+        "description": "Organize timelines and milestones to deliver on time."
+      },
+      "performance": {
+        "title": "Fast & Responsive",
+        "description": "Blazing fast performance on all devices, mobile-first design."
+      }
+    },
+    "ctaTitle": "Ready to boost your team's productivity?",
+    "ctaDescription": "Join the teams using TaskBuddy to deliver faster.",
+    "ctaButton": "Get Started Today",
+    "menu": {
+      "introduction": "Introduction",
+      "pricing": "Pricing"
+    },
     "signIn": "Sign In",
-    "signUp": "Try it now"
+    "signUp": "Sign Up",
+    "signOut": "Sign Out",
+    "dashboard": "Dashboard",
+    "introduction": "Introduction",
+    "helpFeedback": "Help & Feedback",
+    "profile": "Profile"
   },
   "Profile": {
     "personalInfo": "Profile information",
