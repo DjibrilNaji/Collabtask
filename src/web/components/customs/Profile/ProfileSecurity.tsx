@@ -1,6 +1,7 @@
 "use client"
 
 import { Check, Shield } from "lucide-react"
+import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
 
 import User from "@/types/User"
@@ -14,7 +15,12 @@ export default function ProfileSecurity({ user }: ProfileProps) {
   const t = useTranslations("Profile")
 
   return (
-    <div className="border rounded-lg p-6 space-y-3">
+    <motion.div
+      initial={{ opacity: 0, y: 20, scale: 0.98 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      className="border rounded-lg p-6 space-y-3"
+    >
       <h3 className="font-semibold text-lg flex items-center gap-2">
         <Shield />
         {t("security")}
@@ -44,6 +50,6 @@ export default function ProfileSecurity({ user }: ProfileProps) {
           {t("configure")}
         </Button>
       </div>
-    </div>
+    </motion.div>
   )
 }

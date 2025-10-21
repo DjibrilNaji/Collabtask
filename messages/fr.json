@@ -3,7 +3,8 @@
     "back": "Retour",
     "goBackToLogin": "Retour à la connexion",
     "or": "ou",
-    "logout": "Se déconnecter"
+    "logout": "Se déconnecter",
+    "cancel": "Annuler"
   },
   "LocaleSwitcher": {
     "label": "Choisir la langue",
@@ -29,6 +30,8 @@
     "notVerified": "Non vérifié",
     "twoFactorAuthentication": "Authentification à deux facteurs",
     "configure": "Configurer",
+    "upload": "Télécharger",
+    "uploading": "Téléchargement...",
     "updatedSuccessfully": "Profil mis à jour avec succès"
   },
   "Form": {
@@ -94,10 +97,13 @@
     "ACCOUNT_NOT_FOUND": "Compte introuvable.",
     "USER_ALREADY_HAS_PASSWORD": "L'utilisateur possède déjà un mot de passe.",
     "UNKNOWN_ERROR": "Une erreur inconnue s'est produite. Veuillez réessayer plus tard.",
-    "INTERNAL_SERVER_ERROR": "Une erreur interne du serveur s'est produite. Veuillez réessayer plus tard."
+    "INTERNAL_SERVER_ERROR": "Une erreur interne du serveur s'est produite. Veuillez réessayer plus tard.",
+    "ERROR_FILE_SIZE_TOO_LARGE": "La taille du fichier dépasse la limite autorisée de {size} Mo.",
+    "UPLOAD_MONTHLY_LIMIT_REACHED": "Vous avez atteint votre limite mensuelle de 2 téléchargements de fichiers."
   },
   "GlobalSuccess": {
     "REGISTRATION_SUCCESS": "Inscription réussie !",
-    "LOGIN_SUCCESS": "Connexion réussie !"
+    "LOGIN_SUCCESS": "Connexion réussie !",
+    "UPLOAD_SUCCESS": "Fichier téléchargé avec succès !"
   }
 }

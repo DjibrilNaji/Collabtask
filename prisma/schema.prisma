@@ -11,7 +11,6 @@ model User {
   id                    String                  @id @default(uuid())
   email                 String                  @unique
   name                  String
-  avatar_url            String?
   emailVerified         Boolean
   image                 String?
   createdAt             DateTime
@@ -22,8 +21,19 @@ model User {
   TaskComment           TaskComment[]
   sessions              Session[]
   accounts              Account[]
+  UserUpload            UserUpload[]
 
   @@map("user")
+}
+
+model UserUpload {
+  id        String   @id @default(uuid())
+  userId    String
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@map("user_upload")
 }
 
 model EmailVerificationCode {

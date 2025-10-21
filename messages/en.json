@@ -3,7 +3,8 @@
     "back": "Back",
     "goBackToLogin": "Back to Login",
     "or": "or",
-    "logout": "Log Out"
+    "logout": "Log Out",
+    "cancel": "Cancel"
   },
   "LocaleSwitcher": {
     "label": "Choose Language",
@@ -27,6 +28,8 @@
     "notVerified": "Not Verified",
     "twoFactorAuthentication": "Two-Factor Authentication",
     "configure": "Configure",
+    "upload": "Upload",
+    "uploading": "Uploading...",
     "updatedSuccessfully": "Profile updated successfully"
   },
   "Form": {
@@ -92,10 +95,13 @@
     "ACCOUNT_NOT_FOUND": "Account not found.",
     "USER_ALREADY_HAS_PASSWORD": "User already has a password set.",
     "UNKNOWN_ERROR": "An unknown error occurred. Please try again later.",
-    "INTERNAL_SERVER_ERROR": "An internal server error occurred. Please try again later."
+    "INTERNAL_SERVER_ERROR": "An internal server error occurred. Please try again later.",
+    "ERROR_FILE_SIZE_TOO_LARGE": "The file size exceeds the allowed limit of {size} MB.",
+    "UPLOAD_MONTHLY_LIMIT_REACHED": "You have reached your monthly limit of 2 file uploads."
   },
   "GlobalSuccess": {
     "REGISTRATION_SUCCESS": "Registration successful!",
-    "LOGIN_SUCCESS": "Login successful!"
+    "LOGIN_SUCCESS": "Login successful!",
+    "UPLOAD_SUCCESS": "File uploaded successfully!"
   }
 }

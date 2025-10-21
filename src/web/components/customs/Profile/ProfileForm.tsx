@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useMutation, useQueryClient } from "@tanstack/react-query"
 import { User as UserIcon } from "lucide-react"
+import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
 import { useForm } from "react-hook-form"
 import { toast } from "sonner"
@@ -69,7 +70,12 @@ export default function ProfileForm({ user }: ProfileProps) {
 
   return (
     <>
-      <div className="border rounded-lg p-6 space-y-4">
+      <motion.div
+        initial={{ opacity: 0, y: 20, scale: 0.98 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+        className="border rounded-lg p-6 space-y-4"
+      >
         <h3 className="font-semibold text-lg flex items-center gap-2">
           <UserIcon />
           {t("Profile.personalInfo")}
@@ -127,7 +133,7 @@ export default function ProfileForm({ user }: ProfileProps) {
             </div>
           </form>
         </Form>
-      </div>
+      </motion.div>
     </>
   )
 }
