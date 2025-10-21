@@ -1,3 +1,4 @@
+import { HeroUIProvider } from "@heroui/system"
 import type { Metadata } from "next"
 import { NextIntlClientProvider } from "next-intl"
 import { getLocale } from "next-intl/server"
@@ -41,8 +42,10 @@ export default async function RootLayout({
             disableTransitionOnChange
           >
             <NextIntlClientProvider>
-              {children}
-              <Toaster position="bottom-right" richColors />
+              <HeroUIProvider>
+                {children}
+                <Toaster position="bottom-right" richColors />
+              </HeroUIProvider>
             </NextIntlClientProvider>
           </ThemeProvider>
         </TanstackProvider>

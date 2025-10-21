@@ -15,6 +15,7 @@ export const routes = {
   },
   profile: "/profile",
   dashboard: "/dashboard",
+  demo: "/demo",
   api: {
     userById: (id: string) => `/api/users/${id}`
   }

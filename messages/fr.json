@@ -12,11 +12,55 @@
     "fr": "Français"
   },
   "LandingPage": {
-    "title": "Bienvenue sur Taskly",
+    "titleMainPart1": "Simplifiez la gestion",
+    "titleMainPart2": "collaborative de vos tâches",
+    "subtitle1": "Organisez vos projets, collaborez en temps réel et livrez plus vite.",
+    "subtitle2": "Une plateforme moderne, rapide et conçue pour les équipes.",
+    "demo": "Voir la démo",
+    "getStarted": "Commencer",
+    "adopted": "Déjà adopté par des milliers d’équipes pour livrer plus vite.",
+    "sectionTitle": "Tout ce qu’il faut pour la productivité d’équipe",
+    "sectionDescription": "Des fonctionnalités puissantes pensées pour la collaboration et la livraison de projets.",
+    "features": {
+      "teamCollaboration": {
+        "title": "Collaboration d’équipe",
+        "description": "Travail fluide avec mises à jour en temps réel et projets partagés."
+      },
+      "taskManagement": {
+        "title": "Gestion des tâches",
+        "description": "Créez, assignez et suivez les tâches avec statuts et priorités personnalisables."
+      },
+      "realtimeComments": {
+        "title": "Commentaires en temps réel",
+        "description": "Discutez des tâches via commentaires threadés et notifications instantanées."
+      },
+      "liveNotifications": {
+        "title": "Notifications live",
+        "description": "Restez à jour sur les activités et changements de vos projets."
+      },
+      "projectPlanning": {
+        "title": "Planification de projet",
+        "description": "Organisez les timelines et les jalons pour livrer à temps."
+      },
+      "performance": {
+        "title": "Rapide & responsive",
+        "description": "Performances fulgurantes sur tous les devices, design mobile-first."
+      }
+    },
+    "ctaTitle": "Prêt à booster la productivité de votre équipe ?",
+    "ctaDescription": "Rejoignez les équipes qui utilisent TaskBuddy pour livrer plus vite.",
+    "ctaButton": "Commencer aujourd’hui",
+    "menu": {
+      "introduction": "Introduction",
+      "pricing": "Tarification"
+    },
     "signIn": "Se connecter",
     "signUp": "Essayer maintenant",
-    "myAccount": "Mon compte",
-    "manageYourInfo": "Gérer vos informations personnelles"
+    "signOut": "Se déconnecter",
+    "dashboard": "Tableau de bord",
+    "introduction": "Introduction",
+    "helpFeedback": "Aide & Retours",
+    "profile": "Profil"
   },
   "Profile": {
     "personalInfo": "Informations personnelles",
