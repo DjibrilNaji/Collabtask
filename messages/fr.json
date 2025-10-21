@@ -12,7 +12,7 @@
     "fr": "Français"
   },
   "LandingPage": {
-    "title": "Bienvenue sur CollabTask",
+    "title": "Bienvenue sur Taskly",
     "signIn": "Se connecter",
     "signUp": "Essayer maintenant",
     "myAccount": "Mon compte",
@@ -35,9 +35,9 @@
     "updatedSuccessfully": "Profil mis à jour avec succès"
   },
   "Form": {
-    "loginTitle": "Se connecter à CollabTask",
-    "registerTitle": "S'inscrire à CollabTask",
-    "description": "Commencez à gérer vos projets avec CollabTask",
+    "loginTitle": "Se connecter à Taskly",
+    "registerTitle": "S'inscrire à Taskly",
+    "description": "Commencez à gérer vos projets avec Taskly",
     "fullName": "Nom complet",
     "email": "Adresse e-mail",
     "password": "Mot de passe",
