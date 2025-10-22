@@ -18,12 +18,14 @@ export function AuthLayout({ children }: AuthLayoutProps) {
   return (
     <div className="flex flex-col h-screen">
       <div className="flex justify-between items-center mx-2 px-2 py-4 gap-4">
-        <Button variant="ghost">
-          <ArrowLeft className="mr-2 h-4 w-4" />
-          <Link href={routes.home}>{t("home")}</Link>
-        </Button>
+        <Link href={routes.home}>
+          <Button variant="ghost">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            {t("home")}
+          </Button>
+        </Link>
 
-        <div className="flex mx-2 px-2 py-4 gap-4">
+        <div className="flex gap-4">
           <LocaleDropdown />
           <ModeToggle />
         </div>
