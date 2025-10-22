@@ -4,7 +4,8 @@
     "goBackToLogin": "Retour à la connexion",
     "or": "ou",
     "logout": "Se déconnecter",
-    "cancel": "Annuler"
+    "cancel": "Annuler",
+    "home": "Accueil"
   },
   "LocaleSwitcher": {
     "label": "Choisir la langue",
