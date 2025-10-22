@@ -1,3 +1,6 @@
+"use client"
+
+import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
 import { ReactNode } from "react"
 
@@ -15,7 +18,12 @@ type AuthCardProps = {
 export function AuthCard({ title, description, children, showOAuth = true }: AuthCardProps) {
   const t = useTranslations("Global")
   return (
-    <div className="flex flex-col border p-6 rounded-lg shadow-lg max-w-md w-full gap-5 overflow-hidden">
+    <motion.div
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      className="flex flex-col border p-6 rounded-lg shadow-lg max-w-md w-full gap-5 overflow-hidden"
+    >
       <div className="flex flex-col justify-center items-center gap-2 mb-5">
         <h1 className="text-2xl font-bold text-center flex items-center gap-2">
           <CircleIcon />
@@ -32,6 +40,6 @@ export function AuthCard({ title, description, children, showOAuth = true }: Aut
           <SignOAuthButton />
         </>
       )}
-    </div>
+    </motion.div>
   )
 }

@@ -4,7 +4,8 @@
     "goBackToLogin": "Back to Login",
     "or": "or",
     "logout": "Log Out",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "home": "Home"
   },
   "LocaleSwitcher": {
     "label": "Choose Language",
