@@ -1,6 +1,7 @@
-import WorkSpace from "@/types/Workspace"
+import { Task, TaskComment } from "@/types/Task"
+import { WorkSpace, WorkSpaceMember, WorkspaceSummary } from "@/types/Workspace"
 
-type User = {
+export type User = {
   id: string
   name: string
   email: string
@@ -8,6 +9,16 @@ type User = {
   createdAt: string
   image?: string
   Workspace?: WorkSpace[]
+  WorkspaceMember?: WorkSpaceMember[]
+  Task?: Task[]
+  TaskComment?: TaskComment[]
 }
 
-export default User
+export type UserProjectsSummary = {
+  id: string
+  name: string
+  email: string
+  image?: string
+  createdAt: string
+  Workspace: WorkspaceSummary[]
+}

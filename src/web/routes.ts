@@ -19,6 +19,7 @@ export const routes = {
   projects: "/dashboard/projects",
   demo: "/demo",
   api: {
-    userById: (id: string) => `/api/users/${id}`
+    userById: (id: string) => `/api/users/${id}`,
+    userProjectsSummary: (userId: string) => `/api/projects/${userId}`
   }
 }

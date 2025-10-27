@@ -120,7 +120,10 @@
     "title": "Projets",
     "noProjectsTitle": "Aucun projet trouvé",
     "noProjects": "Aucun projet trouvé. Créez votre premier projet pour commencer à organiser vos tâches.",
-    "createProject": "Créer un projet"
+    "createProject": "Créer un projet",
+    "ticketsNumber": "{count, plural, =0 {aucun ticket} =1 {un ticket} other {# tickets}}",
+    "membersNumber": "{count, plural, =0 {aucun membre} =1 {un membre} other {# membres}}",
+    "timeElapsed": "Il y a {hours, plural, =0 {quelques minutes} =1 {une heure} other {# heures}}"
   },
   "ErrorState": {
     "title": "Oups !",

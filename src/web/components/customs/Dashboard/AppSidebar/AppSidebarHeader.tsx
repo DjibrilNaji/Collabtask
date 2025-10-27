@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl"
 import Link from "next/link"
 
 import { signOutAction } from "@/actions/auth"
-import User from "@/types/User"
+import { UserProjectsSummary } from "@/types/User"
 import { UserMenuItem } from "@/web/components/customs/Dashboard/AppSidebar/UserMenuItem"
 import AvatarComponent from "@/web/components/customs/Utils/AvatarComponent"
 import {
@@ -22,7 +22,7 @@ import { SidebarMenuButton, SidebarTrigger } from "@/web/components/ui/sidebar"
 import { routes } from "@/web/routes"
 
 interface AppSidebarHeaderProps {
-  user: User
+  user: UserProjectsSummary
   title: string
 }
 

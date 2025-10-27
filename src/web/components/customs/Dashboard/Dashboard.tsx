@@ -7,7 +7,7 @@ import { AppSidebarHeader } from "@/web/components/customs/Dashboard/AppSidebar/
 import { AppSidebarSkeleton } from "@/web/components/customs/Dashboard/AppSidebar/AppSidebarSkeleton"
 import { ErrorState } from "@/web/components/customs/Utils/ErrorState"
 import { SidebarInset } from "@/web/components/ui/sidebar"
-import { userService } from "@/web/services/user-service"
+import { projectService } from "@/web/services/projects-service"
 
 interface DashboardProps {
   userId: string
@@ -22,7 +22,7 @@ export function Dashboard({ userId }: DashboardProps) {
     error
   } = useQuery({
     queryKey: ["user", userId],
-    queryFn: () => userService.getById(userId),
+    queryFn: () => projectService.getById(userId),
     enabled: !!userId
   })
 

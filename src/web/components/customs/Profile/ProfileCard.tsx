@@ -9,7 +9,7 @@ import { toast } from "sonner"
 
 import { upload } from "@/actions/upload"
 import { handleAppError } from "@/lib/error"
-import User from "@/types/User"
+import { User } from "@/types/User"
 import AvatarComponent from "@/web/components/customs/Utils/AvatarComponent"
 import { Button } from "@/web/components/ui/button"
 import { Spinner } from "@/web/components/ui/spinner"

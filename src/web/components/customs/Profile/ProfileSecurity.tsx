@@ -4,7 +4,7 @@ import { Check, Shield } from "lucide-react"
 import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
 
-import User from "@/types/User"
+import { User } from "@/types/User"
 import { Button } from "@/web/components/ui/button"
 
 interface ProfileProps {

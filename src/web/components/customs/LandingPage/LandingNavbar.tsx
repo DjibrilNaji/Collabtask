@@ -121,7 +121,7 @@ export default function LandingNavbar() {
         <NavbarMenu>
           {menuItems
             .filter((item) => !item.needSession || session)
-            .map((item, index) => (
+            .map((item) => (
               <NavbarMenuItem key={item.key}>
                 <Link className="w-full" href={item.href} size="lg">
                   {t(item.key)}

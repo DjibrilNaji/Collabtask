@@ -1,25 +1,18 @@
 "use client"
 
 import { useQuery } from "@tanstack/react-query"
-import { Folder } from "lucide-react"
 import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
-import Link from "next/link"
 
+import TargetCursor from "@/web/components/bits/TargetCursor"
 import { AppSidebarHeader } from "@/web/components/customs/Dashboard/AppSidebar/AppSidebarHeader"
 import { AppSidebarSkeleton } from "@/web/components/customs/Dashboard/AppSidebar/AppSidebarSkeleton"
+import { NoProject } from "@/web/components/customs/Dashboard/Projects/NoProject"
+import { ProjectsCard } from "@/web/components/customs/Dashboard/Projects/ProjectsCard"
 import { ErrorState } from "@/web/components/customs/Utils/ErrorState"
 import { Button } from "@/web/components/ui/button"
-import {
-  Empty,
-  EmptyContent,
-  EmptyDescription,
-  EmptyHeader,
-  EmptyMedia,
-  EmptyTitle
-} from "@/web/components/ui/empty"
 import { SidebarInset } from "@/web/components/ui/sidebar"
-import { userService } from "@/web/services/user-service"
+import { projectService } from "@/web/services/projects-service"
 
 interface DashboardProps {
   userId: string
@@ -34,7 +27,7 @@ export function Projects({ userId }: DashboardProps) {
     error
   } = useQuery({
     queryKey: ["user", userId],
-    queryFn: () => userService.getById(userId),
+    queryFn: () => projectService.getById(userId),
     enabled: !!userId
   })
 
@@ -49,14 +42,23 @@ export function Projects({ userId }: DashboardProps) {
   return (
     <SidebarInset>
       <AppSidebarHeader user={user} title={t("Projects.title")} />
-
+      <TargetCursor spinDuration={2} hideDefaultCursor={true} />
       {user.Workspace && user.Workspace.length > 0 ? (
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
+          className="container mx-auto px-4 flex flex-col py-2"
         >
-          {/* ProjectList */}
+          <Button className="cursor-target self-end" disabled>
+            {t("Projects.createProject")}
+          </Button>
+
+          <div className="mt-5 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {user.Workspace.map((workspace) => (
+              <ProjectsCard key={workspace.id} workspace={workspace} />
+            ))}
+          </div>
         </motion.div>
       ) : (
         <motion.div
@@ -65,25 +67,7 @@ export function Projects({ userId }: DashboardProps) {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex h-full"
         >
-          <Empty>
-            <EmptyHeader>
-              <EmptyMedia variant="icon">
-                <Folder />
-              </EmptyMedia>
-
-              <EmptyTitle>{t("Projects.noProjectsTitle")}</EmptyTitle>
-
-              <EmptyDescription>{t("Projects.noProjects")}</EmptyDescription>
-            </EmptyHeader>
-
-            <EmptyContent>
-              <div className="flex gap-2">
-                <Button asChild>
-                  <Link href="/projects/create">{t("Projects.createProject")}</Link>
-                </Button>
-              </div>
-            </EmptyContent>
-          </Empty>
+          <NoProject />
         </motion.div>
       )}
     </SidebarInset>
