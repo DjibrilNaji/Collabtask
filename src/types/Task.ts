@@ -1,5 +1,5 @@
-import { User } from "./User"
-import { WorkSpace } from "./Workspace"
+import { User } from "@/types/User"
+import { WorkSpace } from "@/types/Workspace"
 
 export type Task = {
   id: number
