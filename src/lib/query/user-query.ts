@@ -9,6 +9,15 @@ export const getUserById = async (id: string) =>
       email: true,
       emailVerified: true,
       image: true,
-      createdAt: true
+      createdAt: true,
+      Workspace: {
+        select: {
+          id: true,
+          name: true,
+          slug: true,
+          description: true,
+          created_at: true
+        }
+      }
     }
   })

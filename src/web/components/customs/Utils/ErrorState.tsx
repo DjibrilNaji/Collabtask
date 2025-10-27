@@ -16,7 +16,7 @@ export function ErrorState({ message }: ErrorStateProps) {
   const router = useRouter()
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center text-center py-16 gap-4 text-muted-foreground">
+    <div className="h-screen w-full flex flex-col items-center justify-center text-center py-16 gap-4 text-muted-foreground">
       <AlertTriangle className="w-10 h-10 text-red-500" />
       <div>
         <h2 className="text-lg font-semibold text-foreground mb-1">{t("title")}</h2>
