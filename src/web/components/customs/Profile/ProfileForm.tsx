@@ -11,7 +11,7 @@ import z from "zod"
 
 import { updateUserAction } from "@/actions/update-user"
 import { updateFormSchema, UpdateType } from "@/types/formTypes"
-import User from "@/types/User"
+import { User } from "@/types/User"
 import { Button } from "@/web/components/ui/button"
 import {
   Form,

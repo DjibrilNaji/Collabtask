@@ -1,6 +1,7 @@
 "use client"
+
 import { useMutation, useQueryClient } from "@tanstack/react-query"
-import { Camera, UserIcon } from "lucide-react"
+import { Camera } from "lucide-react"
 import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
 import { FormEventHandler, useRef, useState } from "react"
@@ -8,8 +9,8 @@ import { toast } from "sonner"
 
 import { upload } from "@/actions/upload"
 import { handleAppError } from "@/lib/error"
-import User from "@/types/User"
-import { Avatar, AvatarFallback, AvatarImage } from "@/web/components/ui/avatar"
+import { User } from "@/types/User"
+import AvatarComponent from "@/web/components/customs/Utils/AvatarComponent"
 import { Button } from "@/web/components/ui/button"
 import { Spinner } from "@/web/components/ui/spinner"
 
@@ -72,16 +73,11 @@ export default function ProfileCard({ user }: ProfileCardProps) {
       >
         <form onSubmit={handleUpload} className="flex flex-col items-center gap-4">
           <div className="relative">
-            <Avatar className="w-28 h-28">
-              <AvatarImage
-                src={preview || user.image || undefined}
-                alt="Profile picture"
-                className="object-cover"
-              />
-              <AvatarFallback>
-                <UserIcon className="h-16 w-16 text-gray-400" />
-              </AvatarFallback>
-            </Avatar>
+            <AvatarComponent
+              image={preview || user.image || undefined}
+              userName={user.name}
+              className="w-28 h-28"
+            />
 
             <label className="absolute bottom-0 right-0 w-10 h-10 bg-black rounded-full flex items-center justify-center text-white border-2 border-white cursor-pointer">
               <Camera className="w-5 h-5" />

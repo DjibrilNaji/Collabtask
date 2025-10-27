@@ -1,4 +1,4 @@
-import User from "@/types/User"
+import { User } from "@/types/User"
 import { routes } from "@/web/routes"
 import apiClient from "@/web/services/api-client"
 

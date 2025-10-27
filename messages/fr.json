@@ -108,10 +108,28 @@
       "emailVerification": "Vérifiez votre e-mail pour la vérification."
     }
   },
+  "Dashboard": {
+    "title": "Tableau de bord",
+    "mainNavigation": {
+      "title": "Navigation principale",
+      "dashboard": "Tableau de bord",
+      "projects": "Projets"
+    }
+  },
+  "Projects": {
+    "title": "Projets",
+    "noProjectsTitle": "Aucun projet trouvé",
+    "noProjects": "Aucun projet trouvé. Créez votre premier projet pour commencer à organiser vos tâches.",
+    "createProject": "Créer un projet",
+    "ticketsNumber": "{count, plural, =0 {aucun ticket} =1 {un ticket} other {# tickets}}",
+    "membersNumber": "{count, plural, =0 {aucun membre} =1 {un membre} other {# membres}}",
+    "timeElapsed": "Il y a {hours, plural, =0 {quelques minutes} =1 {une heure} other {# heures}}"
+  },
   "ErrorState": {
     "title": "Oups !",
     "defaultMessage": "Une erreur est survenue. Veuillez réessayer plus tard.",
     "profileMessage": "Une erreur est survenue lors du chargement de votre profil. Veuillez réessayer plus tard.",
+    "dashboardMessage": "Une erreur est survenue lors du chargement du tableau de bord. Veuillez réessayer plus tard.",
     "retry": "Réessayer",
     "home": "Accueil"
   },

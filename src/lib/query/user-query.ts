@@ -1,7 +1,7 @@
 import prisma from "@/lib/prisma"
 
-export const getUserById = async (id: string) =>
-  await prisma.user.findUnique({
+export const getUserById = async (id: string) => {
+  return await prisma.user.findUnique({
     where: { id },
     select: {
       id: true,
@@ -12,3 +12,33 @@ export const getUserById = async (id: string) =>
       createdAt: true
     }
   })
+}
+
+export const getUserProjectsSummary = async (id: string) => {
+  return await prisma.user.findUnique({
+    where: { id },
+    select: {
+      id: true,
+      name: true,
+      email: true,
+      image: true,
+
+      Workspace: {
+        select: {
+          id: true,
+          name: true,
+          slug: true,
+          created_at: true,
+
+          _count: {
+            select: {
+              Task: true,
+              WorkspaceMember: true
+            }
+          }
+        },
+        orderBy: { created_at: "desc" }
+      }
+    }
+  })
+}
