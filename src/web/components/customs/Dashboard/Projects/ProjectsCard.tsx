@@ -14,8 +14,8 @@ export function ProjectsCard({ workspace }: ProjectsCardProps) {
   const t = useTranslations()
 
   return (
-    <Link href={routes.workspace(workspace.slug)} className="cursor-none">
-      <Card className="cursor-target hover:scale-105 transition-transform duration-200">
+    <Link href={routes.workspace(workspace.slug)}>
+      <Card className="hover:scale-105 transition-transform duration-200">
         <CardHeader>
           <div className="flex justify-between items-center mb-2">
             <Folder className="h-5 w-5" aria-hidden="true" />

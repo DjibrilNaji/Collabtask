@@ -4,7 +4,6 @@ import { useQuery } from "@tanstack/react-query"
 import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
 
-import TargetCursor from "@/web/components/bits/TargetCursor"
 import { AppSidebarHeader } from "@/web/components/customs/Dashboard/AppSidebar/AppSidebarHeader"
 import { AppSidebarSkeleton } from "@/web/components/customs/Dashboard/AppSidebar/AppSidebarSkeleton"
 import { NoProject } from "@/web/components/customs/Dashboard/Projects/NoProject"
@@ -42,7 +41,7 @@ export function Projects({ userId }: DashboardProps) {
   return (
     <SidebarInset>
       <AppSidebarHeader user={user} title={t("Projects.title")} />
-      <TargetCursor spinDuration={2} hideDefaultCursor={true} />
+
       {user.Workspace && user.Workspace.length > 0 ? (
         <motion.div
           initial={{ y: 50, opacity: 0 }}
@@ -50,7 +49,7 @@ export function Projects({ userId }: DashboardProps) {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="container mx-auto px-4 flex flex-col py-2"
         >
-          <Button className="cursor-target self-end" disabled>
+          <Button className="self-end" disabled>
             {t("Projects.createProject")}
           </Button>
 
