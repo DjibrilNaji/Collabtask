@@ -8,7 +8,13 @@ export const createWorkspace = async (
     data: {
       name: data.name,
       description: data.description,
-      slug: data.name.toLowerCase().replace(/\s+/g, "-"),
+      slug: data.name
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .trim()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, ""),
       owner_id: userId
     }
   })

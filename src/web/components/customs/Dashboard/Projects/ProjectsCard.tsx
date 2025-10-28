@@ -1,5 +1,5 @@
 import { Folder } from "lucide-react"
-import { useTranslations } from "next-intl"
+import { useFormatter, useNow, useTranslations } from "next-intl"
 import Link from "next/link"
 
 import { WorkspaceSummary } from "@/types/Workspace"
@@ -12,6 +12,8 @@ interface ProjectsCardProps {
 
 export function ProjectsCard({ workspace }: ProjectsCardProps) {
   const t = useTranslations()
+  const format = useFormatter()
+  const now = useNow()
 
   return (
     <Link href={routes.workspace(workspace.slug)}>
@@ -20,20 +22,20 @@ export function ProjectsCard({ workspace }: ProjectsCardProps) {
           <div className="flex flex-col gap-4">
             <div className="flex justify-between items-center">
               <Folder className="h-5 w-5" aria-hidden="true" />
-              <span className="text-sm text-muted-foreground">
-                {t("Projects.ticketsNumber", { count: workspace._count.Task })}
-              </span>
             </div>
 
             <CardTitle>{workspace.name}</CardTitle>
           </div>
-
-          <CardFooter className="p-0 mt-auto">
-            <span className="text-sm text-muted-foreground">
-              {t("Projects.membersNumber", { count: workspace._count.WorkspaceMember })}
-            </span>
-          </CardFooter>
         </CardHeader>
+
+        <CardFooter className="flex justify-between">
+          <span className="text-sm text-muted-foreground">
+            {t("Projects.membersNumber", { count: workspace._count.WorkspaceMember })}
+          </span>
+          <span className="text-sm text-muted-foreground">
+            {format.relativeTime(workspace.created_at, now)}
+          </span>
+        </CardFooter>
       </Card>
     </Link>
   )
