@@ -15,18 +15,20 @@ export function ProjectsCard({ workspace }: ProjectsCardProps) {
 
   return (
     <Link href={routes.workspace(workspace.slug)}>
-      <Card className="hover:scale-105 transition-transform duration-200">
-        <CardHeader>
-          <div className="flex justify-between items-center mb-2">
-            <Folder className="h-5 w-5" aria-hidden="true" />
-            <span className="text-sm text-muted-foreground">
-              {t("Projects.ticketsNumber", { count: workspace._count.Task })}
-            </span>
+      <Card className="hover:scale-105 transition-transform duration-200 h-40 flex flex-col">
+        <CardHeader className="flex-1">
+          <div className="flex flex-col gap-4">
+            <div className="flex justify-between items-center">
+              <Folder className="h-5 w-5" aria-hidden="true" />
+              <span className="text-sm text-muted-foreground">
+                {t("Projects.ticketsNumber", { count: workspace._count.Task })}
+              </span>
+            </div>
+
+            <CardTitle>{workspace.name}</CardTitle>
           </div>
 
-          <CardTitle>{workspace.name}</CardTitle>
-
-          <CardFooter className="mt-4 flex flex-nowrap items-center justify-between w-full p-0">
+          <CardFooter className="p-0 mt-auto">
             <span className="text-sm text-muted-foreground">
               {t("Projects.membersNumber", { count: workspace._count.WorkspaceMember })}
             </span>
