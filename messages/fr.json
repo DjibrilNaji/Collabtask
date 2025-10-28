@@ -98,6 +98,8 @@
     "save": "Enregistrer",
     "Error": {
       "fullNameError": "Veuillez entrer votre nom complet.",
+      "projectNameError": "Veuillez entrer un nom de projet valide.",
+      "projectDescriptionError": "Veuillez entrer une description de projet valide (au moins 10 caractères).",
       "emailError": "Veuillez entrer une adresse e-mail valide.",
       "passwordError": "Veuillez entrer votre mot de passe.",
       "passwordLengthError": "Le mot de passe doit comporter au moins 10 caractères.",
@@ -123,7 +125,17 @@
     "createProject": "Créer un projet",
     "ticketsNumber": "{count, plural, =0 {aucun ticket} =1 {un ticket} other {# tickets}}",
     "membersNumber": "{count, plural, =0 {aucun membre} =1 {un membre} other {# membres}}",
-    "timeElapsed": "Il y a {hours, plural, =0 {quelques minutes} =1 {une heure} other {# heures}}"
+    "timeElapsed": "Il y a {hours, plural, =0 {quelques minutes} =1 {une heure} other {# heures}}",
+    "createNewProject": "Créer un nouveau projet",
+    "createProjectDescription": "Remplissez le formulaire ci-dessous pour créer un nouveau projet.",
+    "name": "Nom du projet",
+    "namePlaceholder": "Entrez le nom du projet",
+    "description": "Description du projet",
+    "descriptionPlaceholder": "Tapez la description de votre projet ici.",
+    "cancel": "Annuler",
+    "create": "Créer",
+    "creating": "Création en cours...",
+    "createdSuccessfully": "Projet créé avec succès"
   },
   "ErrorState": {
     "title": "Oups !",
@@ -162,7 +174,8 @@
     "UNKNOWN_ERROR": "Une erreur inconnue s'est produite. Veuillez réessayer plus tard.",
     "INTERNAL_SERVER_ERROR": "Une erreur interne du serveur s'est produite. Veuillez réessayer plus tard.",
     "ERROR_FILE_SIZE_TOO_LARGE": "La taille du fichier dépasse la limite autorisée de {size} Mo.",
-    "UPLOAD_MONTHLY_LIMIT_REACHED": "Vous avez atteint votre limite mensuelle de 2 téléchargements de fichiers."
+    "UPLOAD_MONTHLY_LIMIT_REACHED": "Vous avez atteint votre limite mensuelle de 2 téléchargements de fichiers.",
+    "PROJECT_NAME_ALREADY_EXISTS": "Le nom du projet existe déjà."
   },
   "GlobalSuccess": {
     "REGISTRATION_SUCCESS": "Inscription réussie !",

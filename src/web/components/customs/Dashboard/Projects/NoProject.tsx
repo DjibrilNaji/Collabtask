@@ -1,8 +1,7 @@
 import { Folder } from "lucide-react"
 import { useTranslations } from "next-intl"
-import Link from "next/link"
 
-import { Button } from "@/web/components/ui/button"
+import { CreateProjectDialog } from "@/web/components/customs/Dashboard/Projects/CreateProjectDialog"
 import {
   Empty,
   EmptyContent,
@@ -12,7 +11,11 @@ import {
   EmptyTitle
 } from "@/web/components/ui/empty"
 
-export function NoProject() {
+interface NoProjectProps {
+  userId: string
+}
+
+export function NoProject({ userId }: NoProjectProps) {
   const t = useTranslations()
 
   return (
@@ -29,9 +32,7 @@ export function NoProject() {
 
       <EmptyContent>
         <div className="flex gap-2">
-          <Button asChild>
-            <Link href={""}>{t("Projects.createProject")}</Link>
-          </Button>
+          <CreateProjectDialog userId={userId} />
         </div>
       </EmptyContent>
     </Empty>

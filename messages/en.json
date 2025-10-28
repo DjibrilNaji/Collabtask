@@ -99,6 +99,8 @@
     "save": "Save",
     "Error": {
       "fullNameError": "Please enter your full name.",
+      "projectNameError": "Please enter a valid project name.",
+      "projectDescriptionError": "Please enter a valid project description (at least 10 characters).",
       "emailError": "Please enter a valid email address.",
       "passwordError": "Please enter your password.",
       "passwordLengthError": "Password must be at least 10 characters long.",
@@ -124,7 +126,17 @@
     "createProject": "Create Project",
     "ticketsNumber": "{count, plural, =0 {no tickets} =1 {one ticket} other {# tickets}}",
     "membersNumber": "{count, plural, =0 {no members} =1 {one member} other {# members}}",
-    "timeElapsed": "{hours, plural, =0 {few minutes} =1 {one hour} other {# hours}} ago"
+    "timeElapsed": "{hours, plural, =0 {few minutes} =1 {one hour} other {# hours}} ago",
+    "createNewProject": "Create New Project",
+    "createProjectDescription": "Fill the form below to create a new project.",
+    "name": "Project Name",
+    "namePlaceholder": "Enter project name",
+    "description": "Project Description",
+    "descriptionPlaceholder": "Type your project description here.",
+    "cancel": "Cancel",
+    "create": "Create",
+    "creating": "Creating...",
+    "createdSuccessfully": "Project created successfully"
   },
   "AppSidebar": {
     "profile": "Profile",
@@ -167,7 +179,8 @@
     "UNKNOWN_ERROR": "An unknown error occurred. Please try again later.",
     "INTERNAL_SERVER_ERROR": "An internal server error occurred. Please try again later.",
     "ERROR_FILE_SIZE_TOO_LARGE": "The file size exceeds the allowed limit of {size} MB.",
-    "UPLOAD_MONTHLY_LIMIT_REACHED": "You have reached your monthly limit of 2 file uploads."
+    "UPLOAD_MONTHLY_LIMIT_REACHED": "You have reached your monthly limit of 2 file uploads.",
+    "PROJECT_NAME_ALREADY_EXISTS": "Project name already exists."
   },
   "GlobalSuccess": {
     "REGISTRATION_SUCCESS": "Registration successful!",

@@ -6,10 +6,10 @@ import { useTranslations } from "next-intl"
 
 import { AppSidebarHeader } from "@/web/components/customs/Dashboard/AppSidebar/AppSidebarHeader"
 import { AppSidebarSkeleton } from "@/web/components/customs/Dashboard/AppSidebar/AppSidebarSkeleton"
+import { CreateProjectDialog } from "@/web/components/customs/Dashboard/Projects/CreateProjectDialog"
 import { NoProject } from "@/web/components/customs/Dashboard/Projects/NoProject"
 import { ProjectsCard } from "@/web/components/customs/Dashboard/Projects/ProjectsCard"
 import { ErrorState } from "@/web/components/customs/Utils/ErrorState"
-import { Button } from "@/web/components/ui/button"
 import { SidebarInset } from "@/web/components/ui/sidebar"
 import { projectService } from "@/web/services/projects-service"
 
@@ -49,9 +49,7 @@ export function Projects({ userId }: DashboardProps) {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="container mx-auto px-4 flex flex-col py-2"
         >
-          <Button className="self-end" disabled>
-            {t("Projects.createProject")}
-          </Button>
+          <CreateProjectDialog userId={user.id} />
 
           <div className="mt-5 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {user.Workspace.map((workspace) => (
@@ -66,7 +64,7 @@ export function Projects({ userId }: DashboardProps) {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex h-full"
         >
-          <NoProject />
+          <NoProject userId={user.id} />
         </motion.div>
       )}
     </SidebarInset>

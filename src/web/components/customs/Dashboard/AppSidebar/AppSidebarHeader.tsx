@@ -34,7 +34,7 @@ export function AppSidebarHeader({ user, title }: AppSidebarHeaderProps) {
   }
 
   return (
-    <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear justify-between pr-6">
+    <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear justify-between pr-6 sticky top-0 bg-background z-50">
       <motion.div
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
