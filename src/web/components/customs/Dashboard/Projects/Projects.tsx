@@ -64,7 +64,7 @@ export function Projects({ userId }: DashboardProps) {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex h-full"
         >
-          <NoProject />
+          <NoProject userId={user.id} />
         </motion.div>
       )}
     </SidebarInset>
