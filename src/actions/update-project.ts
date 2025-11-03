@@ -16,9 +16,5 @@ export async function updateProjectAction(workspaceId: number, data: ProjectType
     redirect(routes.auth.login.path)
   }
 
-  try {
-    await updateWorkspace(workspaceId, data)
-  } catch (err) {
-    throw err
-  }
+  await updateWorkspace(workspaceId, data)
 }

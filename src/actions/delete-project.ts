@@ -15,9 +15,5 @@ export async function deleteProjectAction(workspaceId: number) {
     redirect(routes.auth.login.path)
   }
 
-  try {
-    await deleteWorkspace(workspaceId)
-  } catch (err) {
-    throw err
-  }
+  await deleteWorkspace(workspaceId)
 }
